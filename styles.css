@@ -79,9 +79,12 @@ body {
 
 .panel-body form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
 }
+
+    .panel-body form p {
+        grid-column: 1/3;
+    }
 
     .panel-body form label {
         display: block;
@@ -118,7 +121,7 @@ body {
             background: #92bde7;
             transition: background 2s ease-out;
         }
-         
+
 /** Large Screens **/
 @media(min-width: 700px) {
 
@@ -141,4 +144,12 @@ body {
             padding: 0 .3em;
             text-align: left;
         }
+
+    .panel-body form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .panel-body form p {
+        grid-column: initial;
+    }
 }
