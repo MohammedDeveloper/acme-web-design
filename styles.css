@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #92bde7;
+    color: #485e74;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.wrapper .panel-header ul {
+    list-style: none;
+    padding: 0 3em;
+    text-align: center;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.3em 1em;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 5px rgba(72, 94, 116, 0.7);
+}
+
+    .wrapper .panel-header {
+        text-align: left;
+    }
+
+    .wrapper .panel-header, .footer-content {
+        background: #cee7ff;
+        color: #485e74;
+        text-align: center;
+        font-size: 14px;
+        padding: 1em 0 1em 0;
+    }
+
+        .wrapper .panel-header h2 {
+            margin: 0;
+        }
+
+            .wrapper .panel-header h2 span {
+                text-transform: uppercase;
+                font-size: 0.8em;
+            }
+
+        .wrapper .panel-header ul li i.fa {
+            font-size: 16px;
+        }
+
+    .wrapper .panel-body {
+        background: #f9feff;
+        padding: 1em;
+    }
+
+.footer-content {
+    font-size: 12px;
+    padding: 0.5em 0;
+}
+
+.brand {
+    text-align: center;
+    margin-top: 0;
+}
+
+    .brand > span {
+        color: #f9feff;
+    }
+
+
+/* FORM */
+.panel-body h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.panel-body form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+    .panel-body form label {
+        display: block;
+        font-size: 14px;
+    }
+
+    .panel-body form p {
+        margin: 0;
+    }
+
+    .panel-body form input, .panel-body form textarea, .panel-body form button {
+        padding: 1em;
+        width: 100%;
+        border: 1px solid #485e74;
+        resize: none;
+    }
+
+    .panel-body form .full {
+        grid-column: 1/3;
+    }
+
+    .panel-body form button {
+        background: #485e74;
+        color: #f9feff;
+        text-transform: uppercase;
+        font-size: 16px;
+        cursor: pointer;
+        border: 0;
+        transition: background 2s ease-out;
+        font-weight: bold;
+    }
+
+        .panel-body form button:hover,
+        .panel-body form button:focus {
+            background: #92bde7;
+        }
+
+/** Large Screens **/
+@media(min-width: 700px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+        .wrapper .panel-header {
+            text-align: left;
+            padding: 0 1em;
+        }
+
+        .wrapper .panel-body h3 {
+            text-align: left;
+        }
+
+        .wrapper .panel-header ul {
+            list-style: none;
+            padding: 0 .3em;
+            text-align: left;
+        }
+}
