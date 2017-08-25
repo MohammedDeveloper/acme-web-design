@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
-    <title> ACME Web Design </title>
+    <title> Message Me! </title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" href="styles.css" />
@@ -13,9 +14,9 @@
 
     <div class="container">
         <div class="header-content animated bounceInDown">
-            <h1 class="brand"><span>ACME</span> Post Message</h1>
+            <h1 class="brand"><span><i class="fa fa-comments-o"></i> Message</span></h1>
         </div>
-        <div class="wrapper animated bounceInLeft">
+        <div class="wrapper animated bounceInDown">
             <div class="panel-header">
                 <h2><span>Mohammed Rafi Kaleem</span></h2>
                 <ul>
@@ -25,29 +26,29 @@
                 </ul>
             </div>
             <div class="panel-body">
-                <h3>Message Me</h3>
-                <hr />
-                <br />
-                <form>
+                <div id="alertMessage" class="alert animated hide">
+                    Message has been sent.
+                </div>
+                <form id="messageForm">
                     <p>
                         <label><i class="fa fa-user"></i> Name</label>
-                        <input type="text" name="name" />
+                        <input type="text" name="name" id="name" required />
                     </p>
-                    <p>
+                    <!-- <p>
                         <label><i class="fa fa-address-book"></i> Company</label>
-                        <input type="text" name="company" />
+                        <input type="text" name="company" id="company" />
                     </p>
                     <p>
                         <label><i class="fa fa-envelope"></i> Email Address</label>
-                        <input type="email" name="emailaddress" />
+                        <input type="email" name="emailaddress" id="emailaddress" required />
                     </p>
                     <p>
                         <label><i class="fa fa-phone"></i> Phone #</label>
-                        <input type="text" name="phone" />
-                    </p>
+                        <input type="text" name="phone" id="phone" />
+                    </p> -->
                     <p class="full">
                         <label><i class="fa fa-comment"></i> Message</label>
-                        <textarea name="message" rows="5"></textarea>
+                        <textarea name="message" rows="5" maxlength="256" id="message" required></textarea>
                     </p>
                     <p class="full">
                         <button type="submit">Submit</button>
@@ -56,6 +57,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
